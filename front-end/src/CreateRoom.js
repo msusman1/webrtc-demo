@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 
 export default function CreateRoom({onSubmit}) {
@@ -12,6 +12,12 @@ export default function CreateRoom({onSubmit}) {
             alert('Please fill in both fields')
         }
     }
+    useEffect(() => {
+        console.log("setup up")
+        return function cleanup() {
+            console.log("clean up")
+        }
+    }, [])
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-100 to-gray-200">

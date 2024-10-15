@@ -5,6 +5,8 @@ import JoinRoom from "./JoinRoom";
 import ConferencePage from "./ConferencePage";
 import {useState} from "react";
 
+export const SERVER_URL = "http://192.168.1.6:3000";
+
 function App() {
 
     const [room, setRoom] = useState("");
